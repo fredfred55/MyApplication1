@@ -20,7 +20,6 @@ public class OptionsMenu extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // TODO Auto-generated method stub
-        // добавляем пункты меню
         menu.add(0, 1, 0, "add");
         menu.add(0, 2, 0, "edit");
         menu.add(0, 3, 3, "delete");
@@ -31,7 +30,6 @@ public class OptionsMenu extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    // обновление меню
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // TODO Auto-generated method stub
@@ -46,7 +44,6 @@ public class OptionsMenu extends AppCompatActivity {
         // TODO Auto-generated method stub
         StringBuilder sb = new StringBuilder();
 
-        // Выведем в TextView информацию о нажатом пункте меню
         sb.append("Item Menu");
         sb.append("\r\n groupId: " + String.valueOf(item.getGroupId()));
         sb.append("\r\n itemId: " + String.valueOf(item.getItemId()));
