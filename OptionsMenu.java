@@ -3,15 +3,20 @@ package com.example.user.myapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
-import static com.example.user.myapplication.MainActivity.chb;
-import static com.example.user.myapplication.MainActivity.tv;
 
 /**
  * Created by User on 22.01.2017.
  */
 
 public class OptionsMenu extends AppCompatActivity {
+
+    TextView tv = (TextView) findViewById(R.id.textView);
+    CheckBox chb = (CheckBox) findViewById(R.id.chbExtMenu);
+    Menu menu;
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // TODO Auto-generated method stub
@@ -22,7 +27,7 @@ public class OptionsMenu extends AppCompatActivity {
         menu.add(1, 4, 1, "copy");
         menu.add(1, 5, 2, "paste");
         menu.add(1, 6, 4, "exit");
-
+        this.menu = menu;
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -51,4 +56,8 @@ public class OptionsMenu extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public Menu getMenu(){
+        return menu;
+    }
 }
+

@@ -3,9 +3,11 @@ package com.example.user.myapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class MyContexMenu extends AppCompatActivity {
+
     final int MENU_COLOR_RED = 1;
     final int MENU_COLOR_GREEN = 2;
     final int MENU_COLOR_BLUE = 3;
@@ -14,9 +16,15 @@ public class MyContexMenu extends AppCompatActivity {
     final int MENU_SIZE_26 = 5;
     final int MENU_SIZE_30 = 6;
 
+    TextView tvColor = (TextView) findViewById(R.id.tvColor);
+    TextView tvSize = (TextView) findViewById(R.id.tvSize);
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
+        registerForContextMenu(tvColor);
+        registerForContextMenu(tvSize);
+
         // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.tvColor:
